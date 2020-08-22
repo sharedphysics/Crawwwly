@@ -58,7 +58,7 @@ with open('domains.csv') as domainCSV:
         # RUNNING SELENIUM TO CAPTURE SCREENSHOTS
         ###################################################
 
-        os.system ('python3 crawly-selenium.py --url ' + domainname + ' --output results/' + simplename + '/' + outputfilename)
+        os.system ('python3 crawwwly-selenium.py --url ' + domainname + ' --output results/' + simplename + '/' + outputfilename)
         print ('\x1b[3;37;40m' + '  -- File saved as ' + outputfilename + '\x1b[0m') # Log that file was saved
 
 
@@ -105,7 +105,7 @@ with open('domains.csv') as domainCSV:
         path_two = path + '/' + file_Second
         output_comparisons = path + '/' + "differences-" + datestamp + ".jpg"
 
-        print('\x1b[3;37;40m' + '  -- Comparing' + file_First + 'and' + file_Second + '\x1b[0m')
+        print('\x1b[3;37;40m' + '  -- Comparing ' + file_First + ' and ' + file_Second + '\x1b[0m')
 
         def compare_images(path_one, path_two, output_comparisons):
             image1 = Image.open(path_one, mode='r')

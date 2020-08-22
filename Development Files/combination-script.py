@@ -25,7 +25,7 @@ datestamp_Readable = now.strftime("%m/%d/%Y - %H:%M")
 ###################################################
 # READING THE CSV DOMAINS LIST
 ###################################################
-with open('domains.csv') as domainCSV:
+with open('domains-2.csv') as domainCSV:
 
     readCSV = csv.DictReader(domainCSV, delimiter=',')
     for row in readCSV:
@@ -105,7 +105,7 @@ with open('domains.csv') as domainCSV:
         path_two = path + '/' + file_Second
         output_comparisons = path + '/' + "differences-" + datestamp + ".jpg"
 
-        print('\x1b[3;37;40m' + '  -- Comparing' + file_First + 'and' + file_Second + '\x1b[0m')
+        print('\x1b[3;37;40m' + '  -- Comparing ' + file_First + ' and ' + file_Second + '\x1b[0m')
 
         def compare_images(path_one, path_two, output_comparisons):
             image1 = Image.open(path_one, mode='r')

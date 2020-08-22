@@ -682,3 +682,41 @@ JavaScript error: https://www.underconsideration.com/brandnew/, line 153: Refere
 1598132961197	Marionette	INFO	Listening on port 60856
 1598132961219	Marionette	WARN	TLS certificate errors will be ignored for this session
 1598132962348	Marionette	INFO	Stopped listening on port 60856
+1598135043118	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofileaOnhIT"
+1598135043630	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1598135043852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1598135043852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1598135043852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1598135043852	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1598135045952	Marionette	INFO	Listening on port 61187
+1598135045982	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598135048136	Marionette	INFO	Stopped listening on port 61187
+1598135052023	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofilewxgXZe"
+1598135052457	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1598135052679	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1598135052679	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1598135052679	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1598135052679	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1598135054665	Marionette	INFO	Listening on port 61275
+1598135054686	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598135056198	Marionette	INFO	Stopped listening on port 61275
+1598135060366	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofileGaHM0m"
+1598135060787	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1598135061015	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1598135061015	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1598135061015	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1598135061015	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1598135062941	Marionette	INFO	Listening on port 61353
+1598135063014	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.underconsideration.com/brandnew/, line 91: TypeError: document.body is null
+JavaScript error: https://www.underconsideration.com/brandnew/, line 153: ReferenceError: showFallbackImage is not defined
+1598135069888	Marionette	INFO	Stopped listening on port 61353
+1598135074608	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofilex52ziH"
+1598135074991	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1598135075218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1598135075218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1598135075218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1598135075218	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1598135077234	Marionette	INFO	Listening on port 61479
+1598135077246	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598135078636	Marionette	INFO	Stopped listening on port 61479

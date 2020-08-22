@@ -41,6 +41,7 @@
         width:100%;
       }
       .image-container{width:32%; height:auto; display:inline-block;position: relative;float: left;}
+      .snippet-container {margin-top:100px; z-index:500; padding:25px;}
 
       
       /* ------------------- */
@@ -69,6 +70,11 @@
           float: left;
         }
       }
+      .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
       /* ------------------- */
       /*        Mobile       */
       /* ------------------- */

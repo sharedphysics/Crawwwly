@@ -16,9 +16,13 @@ Crawwwly goes through a multi-step process to capture, analyze, and report on da
 6. Once all of the domains have been scanned, a full report is assembled into a single page from all of the snippets
 7. The report is auto-opened for reading pleasure
 
+![terminal logging](terminal.png)
+
+---
+
 # Running Crawwwly for the first time
 
-# How to Use It
+## How to Use It
 Crawly requires `FireFox`, `Python3`, `Selenium`, and `Pillow`. All of these (except Firefox) and be downloaded and configured from the `requirements.txt` file.
 
 ## Requirements
@@ -39,7 +43,9 @@ After that, you can run the script as `python3 crawwwwly.py`
 
 The real value of this script is to set up once and have it running on a schedule. If you're running Crawwwly locally, you can refer to: https://medium.com/better-programming/https-medium-com-ratik96-scheduling-jobs-with-crontab-on-macos-add5a8b26c30 otherwise, you'll need to refer to your server/hosting to figure out their cron-scheduling solution. 
 
-I recommend running the script weekly for best results, but no more than daily. 
+I recommend running the script weekly for best results, but no more than daily.
+
+Note, if you're running Crawwwly on a cron, you may want to comment out line 197 (opening the report on completition): `webbrowser.open('file://' + os.path.realpath("Report.html"))` 
 
 ---
 

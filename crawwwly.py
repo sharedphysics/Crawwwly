@@ -139,9 +139,9 @@ with open('domains.csv') as domainCSV:
         endImg = """\">"""
 
         writeHTMLSnippets.write(
-                """    <div style=\"margin-top:100px; z-index:500;\">
-            <h2>""" + simplename + """, """ + datestamp_Readable + """</h2>\r\n
-                <div class=\"image-container\">\r\n
+                """    <div class=\"clearfix snippet-container\">
+            <div class=\"clearfix\" style=\"margin-top25px;\"><h2>""" + simplename + """, """ + datestamp_Readable + """</h2></div>\r\n
+                <div class=\"clearfix\"><div class=\"image-container\">\r\n
                     <h3>Current Site</h3>\r\n
                     <a href=\"""" + path_one + """\"><img class=\"imagediff\" src=\"""" + path_one + """\"></a>\r\n
                 </div>    \r\n
@@ -153,6 +153,7 @@ with open('domains.csv') as domainCSV:
                     <h3>Previous Capture</h3>\r\n
                     <a href=\"""" + path_two + """\"><img class=\"imagediff\" src=\"""" + path_two + """\"></a>\r\n
                 </div>\r\n
+                </div>
             </div>\r\n
             """
         )

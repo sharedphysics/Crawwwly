@@ -1,6 +1,8 @@
+# Crawwwly - Visual Logging
+
 ![Example comparison, 10 minutes apart](example.png)
 
-# Crawwwly - Visual Logging
+Example report: 
 
 This script is designed to help with visually-driven comparative monitoring. Crawwwly will go to a site, take a full screenshot, and compare that against the last screenshot captured to identify differences.
 
@@ -23,7 +25,7 @@ Crawwwly goes through a multi-step process to capture, analyze, and report on da
 # Running Crawwwly for the first time
 
 ## How to Use It
-Crawly requires `FireFox`, `Python3`, `Selenium`, and `Pillow`. All of these (except Firefox) and be downloaded and configured from the `requirements.txt` file.
+Crawly requires `FireFox`, `Python3`, `Selenium`, and `Pillow`. All of these (except Firefox) can be downloaded and configured from the `requirements.txt` file.
 
 ## Requirements
 - Designed to run on `MacOS`, not `Windows`

@@ -1,8 +1,8 @@
-# Crawwwly - Visual Logging
+# Crawwwly - Visual Monitoring & Logging
 
 ![Example comparison, 10 minutes apart](example.png)
 
-Example report: 
+Example report: https://sharedphysics.github.io/Crawwwly/
 
 This script is designed to help with visually-driven comparative monitoring. Crawwwly will go to a site, take a full screenshot, and compare that against the last screenshot captured to identify differences.
 
@@ -47,7 +47,7 @@ The real value of this script is to set up once and have it running on a schedul
 
 I recommend running the script weekly for best results, but no more than daily.
 
-Note, if you're running Crawwwly on a cron, you may want to comment out line 197 (opening the report on completition): `webbrowser.open('file://' + os.path.realpath("Report.html"))` 
+Note, if you're running Crawwwly on a cron, you may want to comment out line 197 (opening the report on completion): `webbrowser.open('file://' + os.path.realpath("Report.html"))` 
 
 ---
 

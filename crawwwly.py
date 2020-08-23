@@ -85,16 +85,16 @@ with open('domains.csv') as domainCSV:
         print('\x1b[3;37;40m' + '  -- Queueing up images for comparison...' + '\x1b[0m')
 
         path = 'results/' + simplename
-        files = sorted(fnmatch.filter(os.listdir(path), "*.jpg")) # Defined a sorted-by-name, only .jpg file list
+        files = sorted(fnmatch.filter(os.listdir(path), simplename+"*.jpg")) # Defined a sorted-by-name, only .jpg file list
 
-        file_First = files[0] # Define the most recent image
+        file_First = files[-1] # Define the most recent image
         try:
-            file_Second = files[1] # Define the second most recent image
+            file_Second = files[-2] # Define the second most recent image
         except IndexError: # This handles index errors if a second image doesn't exist yet, i.e., you're scanning for the first time. It ends uo comparing against itself for a zero-diff.
-            file_Second = files[0]
+            file_Second = files[-1]
          
-            # print('File 1 = ' + file_First) # Debug to test definition
-            # print('File 2 = ' + file_Second) # Debug to test definition
+        # print('File 1 = ' + file_First) # Debug to test definition
+        # print('File 2 = ' + file_Second) # Debug to test definition
 
 
 

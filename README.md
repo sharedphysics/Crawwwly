@@ -51,9 +51,11 @@ Note, if you're running Crawwwly on a cron, you may want to comment out line 197
 
 ---
 
-# Development Log
+# Development
 
-## V2
+## Log
+
+### V2
 - Parse filenames to ensure correct last 2 images are being compared
 - Capture difference as % for plotting
 - Figuring out if we can bypass png->jpg conversion to avoid the alpha channel (transparency) issue
@@ -61,6 +63,9 @@ Note, if you're running Crawwwly on a cron, you may want to comment out line 197
 - Terminal alert (email?) - % differences between two images, flagging above x%
 - Refactoring for optimization: making all of the similar steps run together (i.e., to not open/close firefox and selenium for each site)
 
-## General to do...
+### General to do...
 - Logo
 - Hosted version for SaaS
+
+### Testing and Contributing
+Please note, the `development files` folder includes the entirety of the app broken into individual components for running and refining the process. 

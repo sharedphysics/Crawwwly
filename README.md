@@ -27,19 +27,30 @@ Crawwwly goes through a multi-step process to capture, analyze, and report on da
 ## How to Use It
 Crawly requires `FireFox`, `Python3`, `Selenium`, and `Pillow`. All of these (except Firefox) can be downloaded and configured from the `requirements.txt` file.
 
-## Requirements
-- Designed to run on `MacOS`, not `Windows`
-- Requires to have `FireFox` installed
-- Requires `Python3`
+### Installation
+
+Assuming you have Python3 already installed and running:
+
+1. Download the GitHub .zip package and open it in a local folder. 
+
+2. Install `GeckoDriver`. This will be the driver to run a headless firefox browser on. The code here is designed to run with Firefox, and the driver I used is included. But you're welcome to install the latest package from here: https://github.com/mozilla/geckodriver/releases (make sure to choose the correct OS version). Once you download the drive, extract it and copy it to your `bin` folder by running the following terminal script in the directory you saved the download in. Make sure to switch in the correct distro file in your execution.
+
+```
+tar -xvf geckodriver-v0.27.0-macos.tar.gz
+mv geckodriver /usr/local/bin/
+``` 
+
+3. Install the requirements.txt file by going to your Crawwwly folder and running `pip3 install -r requirements.txt`
+
+## Running Crawwwly
 
 Running Crawwwwly is really easy:
 
 1. Modify the `domains.csv` file, adding the full URLs that you want to monitor in column 1, and the appropriate "simple name" (no punctuation or spaces) in column 2. This will be used to set the web paths for scanning and then how those images and directories will be created.
 2. In your terminal, enter the directory where Crawwwly was saved
-3. Use `pip3 install requirements.txt` to install the dependencies
-4. Run the script as `python3 crawwwwly.py` 
+3. Run the script as `python3 crawwwwly.py` 
 
-After that, you can run the script as `python3 crawwwwly.py`
+After that, you can run just keep running the script as `python3 crawwwwly.py`
 
 ## Setting a CRON
 
@@ -54,6 +65,8 @@ Note, if you're running Crawwwly on a cron, you may want to comment out line 197
 # Development
 
 ## Log
+
+* 2020 09 25 - Fixed readme.md instructions
 
 ### V2
 - Parse filenames to ensure correct last 2 images are being compared

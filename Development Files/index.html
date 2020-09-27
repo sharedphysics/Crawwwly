@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Roman K.">
-    <title>Crawwwly</title>
+    <title>Crawwwly - Visual Monitoring</title>
 
   <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -29,7 +29,7 @@
 <!--        Styles         -->
 <!-- --------------------- -->
   <style>
-      body {background-color:rgb(244, 244, 244);font-family: 'Raleway', sans-serif;}
+      body {background-color:rgb(244, 244, 244);font-family: 'Raleway', sans-serif; margin:0px; padding:0px;}
       a {
         text-decoration: none;
         color:black;
@@ -41,6 +41,7 @@
         width:100%;
       }
       .image-container{width:32%; height:auto; display:inline-block;position: relative;float: left;}
+      .snippet-container {margin-top:100px; z-index:500; padding:25px;}
 
       
       /* ------------------- */
@@ -69,6 +70,11 @@
           float: left;
         }
       }
+      .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
       /* ------------------- */
       /*        Mobile       */
       /* ------------------- */
@@ -103,19 +109,19 @@
   <!--            Body            -->
   <!-- -------------------------- -->
 
-    <div style="width:100%; height:100px; position: fixed; top:0; z-index:999; background-color:white;">
-        <h1>CRAWWWLY - Competitive Monitoring</h1>
+    <div style="width:100%; height:75px; position: fixed; top:0; z-index:999; background-color:white; padding:10px 0px 0px 25px;">
+        <h1>CRAWWWLY - Visual Monitoring</h1>
     </div>
 
 
-    <div style="margin-top:100px; z-index:500;">
-            <h2>Report, 08/22/2020 - 17:36</h2>
+    <div class="clearfix snippet-container">
+            <div class="clearfix" style="margin-top25px;"><h2>BrandNew, 08/23/2020 - 16:12</h2></div>
 
-                <div class="image-container">
+                <div class="clearfix"><div class="image-container">
 
                     <h3>Current Site</h3>
 
-                    <img class="imagediff" src="results/BrandNew/BrandNew-08222020-1635.jpg">
+                    <a href="results/BrandNew/BrandNew-08232020-1612.jpg"><img class="imagediff" src="results/BrandNew/BrandNew-08232020-1612.jpg"></a>
 
                 </div>    
 
@@ -123,7 +129,7 @@
 
                     <h3>Comparative Differences</h3>
 
-                    <img class="imagediff" src="results/BrandNew/differences-08222020-1736.jpg">
+                    <a href="results/BrandNew/differences-08232020-1612.jpg"><img class="imagediff" src="results/BrandNew/differences-08232020-1612.jpg"></a>
 
                 </div>
 
@@ -131,21 +137,22 @@
 
                     <h3>Previous Capture</h3>
 
-                    <img class="imagediff" src="results/BrandNew/BrandNew-08222020-1654.jpg">
+                    <a href="results/BrandNew/BrandNew-08222020-1851.jpg"><img class="imagediff" src="results/BrandNew/BrandNew-08222020-1851.jpg"></a>
 
                 </div>
 
+                </div>
             </div>
 
             
-    <div style="margin-top:100px; z-index:500;">
-            <h2>Report, 08/22/2020 - 17:36</h2>
+    <div class="clearfix snippet-container">
+            <div class="clearfix" style="margin-top25px;"><h2>Google, 08/23/2020 - 16:12</h2></div>
 
-                <div class="image-container">
+                <div class="clearfix"><div class="image-container">
 
                     <h3>Current Site</h3>
 
-                    <img class="imagediff" src="results/Google/Google-08222020-1635.jpg">
+                    <a href="results/Google/Google-08232020-1612.jpg"><img class="imagediff" src="results/Google/Google-08232020-1612.jpg"></a>
 
                 </div>    
 
@@ -153,7 +160,7 @@
 
                     <h3>Comparative Differences</h3>
 
-                    <img class="imagediff" src="results/Google/differences-08222020-1736.jpg">
+                    <a href="results/Google/differences-08232020-1612.jpg"><img class="imagediff" src="results/Google/differences-08232020-1612.jpg"></a>
 
                 </div>
 
@@ -161,21 +168,22 @@
 
                     <h3>Previous Capture</h3>
 
-                    <img class="imagediff" src="results/Google/Google-08222020-1654.jpg">
+                    <a href="results/Google/Google-08222020-1851.jpg"><img class="imagediff" src="results/Google/Google-08222020-1851.jpg"></a>
 
                 </div>
 
+                </div>
             </div>
 
             
-    <div style="margin-top:100px; z-index:500;">
-            <h2>Report, 08/22/2020 - 17:36</h2>
+    <div class="clearfix snippet-container">
+            <div class="clearfix" style="margin-top25px;"><h2>HackerNews, 08/23/2020 - 16:12</h2></div>
 
-                <div class="image-container">
+                <div class="clearfix"><div class="image-container">
 
                     <h3>Current Site</h3>
 
-                    <img class="imagediff" src="results/HackerNews/HackerNews-08222020-1635.jpg">
+                    <a href="results/HackerNews/HackerNews-08232020-1612.jpg"><img class="imagediff" src="results/HackerNews/HackerNews-08232020-1612.jpg"></a>
 
                 </div>    
 
@@ -183,7 +191,7 @@
 
                     <h3>Comparative Differences</h3>
 
-                    <img class="imagediff" src="results/HackerNews/differences-08222020-1736.jpg">
+                    <a href="results/HackerNews/differences-08232020-1612.jpg"><img class="imagediff" src="results/HackerNews/differences-08232020-1612.jpg"></a>
 
                 </div>
 
@@ -191,21 +199,22 @@
 
                     <h3>Previous Capture</h3>
 
-                    <img class="imagediff" src="results/HackerNews/HackerNews-08222020-1654.jpg">
+                    <a href="results/HackerNews/HackerNews-08222020-1851.jpg"><img class="imagediff" src="results/HackerNews/HackerNews-08222020-1851.jpg"></a>
 
                 </div>
 
+                </div>
             </div>
 
             
-    <div style="margin-top:100px; z-index:500;">
-            <h2>Report, 08/22/2020 - 17:36</h2>
+    <div class="clearfix snippet-container">
+            <div class="clearfix" style="margin-top25px;"><h2>RomanDesignCo, 08/23/2020 - 16:12</h2></div>
 
-                <div class="image-container">
+                <div class="clearfix"><div class="image-container">
 
                     <h3>Current Site</h3>
 
-                    <img class="imagediff" src="results/RomanDesignCo/RomanDesignCo-08222020-1635.jpg">
+                    <a href="results/RomanDesignCo/RomanDesignCo-08232020-1612.jpg"><img class="imagediff" src="results/RomanDesignCo/RomanDesignCo-08232020-1612.jpg"></a>
 
                 </div>    
 
@@ -213,7 +222,7 @@
 
                     <h3>Comparative Differences</h3>
 
-                    <img class="imagediff" src="results/RomanDesignCo/differences-08222020-1736.jpg">
+                    <a href="results/RomanDesignCo/differences-08232020-1612.jpg"><img class="imagediff" src="results/RomanDesignCo/differences-08232020-1612.jpg"></a>
 
                 </div>
 
@@ -221,10 +230,11 @@
 
                     <h3>Previous Capture</h3>
 
-                    <img class="imagediff" src="results/RomanDesignCo/RomanDesignCo-08222020-1653.jpg">
+                    <a href="results/RomanDesignCo/RomanDesignCo-08222020-1851.jpg"><img class="imagediff" src="results/RomanDesignCo/RomanDesignCo-08222020-1851.jpg"></a>
 
                 </div>
 
+                </div>
             </div>
 
             

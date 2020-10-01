@@ -40,6 +40,8 @@ tar -xvf geckodriver-v0.27.0-macos.tar.gz
 mv geckodriver /usr/local/bin/
 ``` 
 
+3. You'll also need to make sure FireFox is installed and that you've [allowed permissions](https://support.apple.com/en-us/HT202491) for the GeckoDriver to run.  
+
 3. Install the requirements.txt file by going to your Crawwwly folder and running `pip3 install -r requirements.txt`
 
 ## Running Crawwwly
@@ -67,6 +69,8 @@ Note, if you're running Crawwwly on a cron, you may want to comment out line 197
 ## Log
 
 * 2020 09 25 - Fixed readme.md instructions
+* Known bug: missing body element on some sites
+``` selenium.common.exceptions.JavascriptException: Message: TypeError: document.body is null ```
 
 ### V2
 - Parse filenames to ensure correct last 2 images are being compared

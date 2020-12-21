@@ -1,5 +1,5 @@
-﻿domains,simplename
-https://romandesign.co,RomanDesignCo
-https://google.com,Google
-https://www.underconsideration.com/brandnew/,BrandNew
-https://news.ycombinator.com,HackerNews
+id,domains,simplename,validation
+0,https://www.landmarkhealth.org/,LandmarkTest,
+1,https://www.landmarhealth.org/,LandmarkTest2,false
+2,https://www.romandesign.co/,Roman,
+3,http://www.adfasfg.com/,test3,false

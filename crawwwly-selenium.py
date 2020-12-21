@@ -5,9 +5,13 @@ from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options
 import argparse
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # This function maximizes screen size for better screenshot results
 def save_screenshot(driver, path):
+    driver.implicitly_wait(5) # wait 5 seconds to confirm page load
     original_size = driver.get_window_size()
     required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
     required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
@@ -36,6 +40,7 @@ if args.url:
     driver.close()
 else:
     parser.print_help()
+    driver.close()
 
 """
 #############################
@@ -51,5 +56,7 @@ else:
 - Needed to configure python correctly as well, see notes in Bear.
 
 - Running on a cron locally: https://ole.michelsen.dk/blog/schedule-jobs-with-crontab-on-mac-osx.html
+
+- Waits in selenium: https://selenium-python.readthedocs.io/waits.html
 
 """

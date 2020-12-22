@@ -39,7 +39,7 @@ with open('domains.csv') as domainCSV:
     for row in readCSV:
         # print (row['\ufeffdomains']) # Debug to test that domains are read correctly
 
-        identification = row['id'] # This defines the domains
+        # identification = row['id'] # unused
         domainname = row['domains'] # This defines the domains
         simplename = row['simplename'] # This defines the simplename
         validation = row['validation'] # This defines the validation row

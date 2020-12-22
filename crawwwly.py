@@ -15,6 +15,8 @@ import pandas
 import pandas as pd
 import requests
 from requests.exceptions import ConnectionError
+from pathlib import Path
+import matplotlib.pyplot as plt
 
 
 ###################################################
@@ -190,6 +192,65 @@ with open('domains.csv') as domainCSV:
 
 
 
+
+            ###################################################
+            # CALCULATE DIFFERENCE PERCENTAGE AS NON-WHITE AREA PERCENTAGE
+            ###################################################
+
+            im = Image.open(output_comparisons)
+
+            white = 0
+            other = 0
+
+            for pixel in im.getdata():
+                if pixel == (255, 255, 255): # if your image is RGB (if RGBA, (0, 0, 0, 255) or so
+                   white += 1
+                else:
+                    other += 1
+            print('white=' + str(white)+', Other='+str(other))
+
+            calcDiff = (other / (white + other) * 100)
+            diffPercentageRounded = str(round(calcDiff, 2)) #Same thing, but rounded as a two decimal variable
+
+            print("Differences are calculated at " +  diffPercentageRounded + "%") 
+
+
+
+            ###################################################
+            # WRITE DIFFERENCES TO CSV
+            ###################################################
+            
+            datestamp2 = now.strftime("%m/%d/%Y-%H:%M")
+            stringDatestamp = str(datestamp2)
+            
+            DiffLog = Path(path + "diff-history.csv")
+
+            if DiffLog.is_file():
+                writeDiffLog = open(DiffLog,"a+") # open in append mode
+                writeDiffLog.write(datestamp2 +  "," + diffPercentageRounded + "\n")
+                writeDiffLog.close()
+            else: 
+                writeDiffLog = open(DiffLog,"w+") # open in write mode
+                writeDiffLog.write("timestamp,difference\n") # adds a header b/c the file did not exist before
+                writeDiffLog.write(datestamp2 + "," +  diffPercentageRounded +  "\n")
+                writeDiffLog.close()
+
+
+
+            ###################################################
+            # CREATE BAR CHART
+            ###################################################
+
+            dataframeDiff = pd.read_csv(path + "diff-history.csv")
+            
+            #print (dataframeDiff) # Testing data that was read.
+
+            diffplot = plt.bar(x=dataframeDiff['timestamp'], height=dataframeDiff['difference'])
+
+            plt.savefig(path + "diffplot.png")
+
+            plotPath = str(path + "diffplot.png") # save plotpath as a variable for future reference
+
             ###################################################
             # BUILD HTML REPORT SNIPPETS
             ###################################################
@@ -203,12 +264,13 @@ with open('domains.csv') as domainCSV:
             writeHTMLSnippets.write(
                     """    <div class=\"clearfix snippet-container\">
                 <div class=\"clearfix\" style=\"margin-top25px;\"><h2>""" + simplename + """, """ + domainname + """</h2><br><p>""" + datestamp_Readable + """</p></div>\r\n
+                    <div><img src=\"""" + plotPath + """\"></div>\r\n
                     <div class=\"clearfix\"><div class=\"image-container\">\r\n
                         <h3>Current Site</h3>\r\n
                         <a href=\"""" + path_one + """\"><img class=\"imagediff\" src=\"""" + path_one + """\"></a>\r\n
                     </div>    \r\n
                     <div class=\"image-container\">\r\n
-                        <h3>Comparative Differences</h3>\r\n
+                        <h3>Comparative Differences (""" + diffPercentageRounded + """%)</h3>\r\n
                         <a href=\"""" + output_comparisons + """\"><img class=\"imagediff\" src=\"""" + output_comparisons + """\"></a>\r\n
                     </div>\r\n
                     <div class=\"image-container\">\r\n

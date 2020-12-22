@@ -1102,3 +1102,30 @@ JavaScript error: https://www.underconsideration.com/brandnew/, line 153: Refere
 1608513651465	Marionette	INFO	Listening on port 54388
 1608513651518	Marionette	WARN	TLS certificate errors will be ignored for this session
 1608513654198	Marionette	INFO	Stopped listening on port 54388
+1608602534579	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofileI52gB9"
+1608602535190	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1608602535389	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1608602535390	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1608602535390	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1608602535390	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1608602537495	Marionette	INFO	Listening on port 62080
+1608602537572	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608602545893	Marionette	INFO	Stopped listening on port 62080
+1608606548340	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofileVi13PP"
+1608606548731	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1608606548934	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1608606548934	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1608606548934	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1608606548934	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1608606550500	Marionette	INFO	Listening on port 64009
+1608606550597	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608606555853	Marionette	INFO	Stopped listening on port 64009
+1608606571046	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/dr/gr66dw_j6xn6xdcp619ltlkw0000gn/T/rust_mozprofileKpVIEn"
+1608606571403	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1608606571611	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1608606571612	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1608606571612	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1608606571612	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1608606573132	Marionette	INFO	Listening on port 64108
+1608606573202	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608606574861	Marionette	INFO	Stopped listening on port 64108

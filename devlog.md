@@ -22,8 +22,8 @@ Refactoring:
 * Do a calculation of the runtimes between functions by differencing timestamps (https://docs.python.org/3/library/time.html)
 
 Features:
+* DONE: ~Delete .png images~
 * Record html differences
-* Delete .png images
 * Read simple names properly and escape them for filenames
 
 ## Reports

@@ -34,6 +34,8 @@ datestamp_Readable = now.strftime("%m/%d/%Y - %H:%M")
 # VALIDATING THE URLS
 ###################################################
 
+print('\x1b[6;30;42m' + "Now validating urls..." + '\x1b[0m' + '\n')
+
 df = pandas.read_csv('domains.csv')
 with open('domains.csv') as domainCSV:
 
@@ -45,8 +47,6 @@ with open('domains.csv') as domainCSV:
         domainname = row['domains'] # This defines the domains
         simplename = row['simplename'] # This defines the simplename
         validation = row['validation'] # This defines the validation row
-        
-        print('\x1b[6;30;42m' + "Now validating urls..." + '\x1b[0m' + '\n')
 
         try: 
             checkurl = requests.get(domainname)
@@ -190,7 +190,7 @@ with open('domains.csv') as domainCSV:
 
 
             ###################################################
-            # COMPARE DIFFERENCES
+            # CREATE DIFF IMAGE
             ###################################################
             path_one = path + '/' + file_First
             path_two = path + '/' + file_Second
@@ -247,7 +247,7 @@ with open('domains.csv') as domainCSV:
             # WRITE DIFFERENCES TO CSV
             ###################################################
             
-            datestamp2 = now.strftime("%m/%d/%Y-%H:%M")
+            datestamp2 = now.strftime("%m/%d/%Y")
             stringDatestamp = str(datestamp2)
 
             DiffLog = Path(path + '/' + "diff-history.csv")
@@ -273,6 +273,8 @@ with open('domains.csv') as domainCSV:
             # print (dataframeDiff) # Testing data that was read.
 
             diffplot = plt.bar(x=dataframeDiff['timestamp'], height=dataframeDiff['difference'])
+
+            plt.xticks(rotation=45)
 
             plt.savefig(path + '/' + "diffplot.png")
 

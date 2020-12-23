@@ -8,10 +8,10 @@ import argparse
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time 
 
 # This function maximizes screen size for better screenshot results
 def save_screenshot(driver, path):
-    driver.implicitly_wait(5) # wait 5 seconds to confirm page load
     original_size = driver.get_window_size()
     required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
     required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
@@ -36,6 +36,7 @@ if args.url:
     driver.capabilities = capabilities
     driver.get(args.url)
     out_path = args.output
+    time.sleep(5) # Wait 5 seconds
     save_screenshot(driver, out_path)  # Saving the screenshot
     driver.close()
 else:

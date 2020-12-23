@@ -15,7 +15,8 @@ Error Handling:
 
 Selenium:
 * Keep browser consistently same size
-* Add wait time to ensure pages load correctly
+* DONE: ~Add wait time to ensure pages load correctly~ (However, this will cause performance issues moving forward and we need to fix in some way or another)
+* Fixed headers sometimes load in the middle of a page
 
 Refactoring:
 * Do rewrite to bundle actions -- do all selenium, then all pillow, then all metrics, etc

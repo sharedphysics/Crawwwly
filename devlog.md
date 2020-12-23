@@ -9,13 +9,13 @@ URL Validation:
 * For validation fails, add a section in the reports for failed URLs
 
 Error Handling:
-* Address error handling --> Selenium "page didn't load" issue
+* DONE (I Think?) ~Address error handling --> Selenium "page didn't load" issue~
 * Address keeping all browsers the same size for accuracy
 * Add loop-skipping "Pass" exception (https://stackoverflow.com/questions/38707513/ignoring-an-error-message-to-continue-with-the-loop-in-python)
 
 Selenium:
-* Keep browser consistently same size
 * DONE: ~Add wait time to ensure pages load correctly~ (However, this will cause performance issues moving forward and we need to fix in some way or another)
+* Keep browser consistently same size
 * Fixed headers sometimes load in the middle of a page
 
 Refactoring:

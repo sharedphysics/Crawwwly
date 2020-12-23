@@ -5,6 +5,7 @@ import os
 from os import listdir
 import fnmatch
 import sys
+import datetime
 from datetime import datetime
 import PIL
 from PIL import Image
@@ -17,6 +18,11 @@ import requests
 from requests.exceptions import ConnectionError
 from pathlib import Path
 import matplotlib.pyplot as plt
+
+################################################
+# SET TIME FOR BENCHMARKING
+################################################
+benchmarkStart = datetime.now()
 
 
 ###################################################
@@ -274,7 +280,8 @@ with open('domains.csv') as domainCSV:
 
             diffplot = plt.bar(x=dataframeDiff['timestamp'], height=dataframeDiff['difference'])
 
-            plt.xticks(rotation=45)
+            plt.xticks(rotation=45) # Rotates the angle of the x-axis labels
+            plt.tight_layout() # Ensures the labels don't fall off the page
 
             plt.savefig(path + '/' + "diffplot.png")
 
@@ -352,6 +359,19 @@ print ('\x1b[6;30;42m' + 'Report completed' + '\x1b[0m' + '\n') # Adding some co
 # Open the file to view the report.
 webbrowser.open('file://' + os.path.realpath("Report.html"))
 
+
+
+################################################
+# FINALIZE BENCHMARK
+################################################
+
+benchmarkFinish = datetime.now()
+
+benchmarkDiff = benchmarkFinish - benchmarkStart
+
+benchmarkDiffstr = str(benchmarkDiff)
+
+print('Benchmarking the time to finish executing: ' + benchmarkDiffstr)
 
 
 

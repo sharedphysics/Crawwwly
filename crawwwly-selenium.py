@@ -13,14 +13,15 @@ import time
 # This function maximizes screen size for better screenshot results
 def save_screenshot(driver, path):
     original_size = driver.get_window_size()
-    required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
+    required_width = 1440 #driver.execute_script('return document.body.parentNode.scrollWidth')
     required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
     driver.set_window_size(required_width, required_height)
     try:
         driver.find_element_by_tag_name('body').screenshot(path)  # Avoids scrollbar
     except Exception as e:
         print(e)
-    driver.set_window_size(original_size['width'], original_size['height'])
+    driver.set_window_size(1440, original_size['height']) 
+    #driver.set_window_size(original_size['width'], original_size['height']) 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--url", required=True)  # usage: usage: python3 crawly-selenium.py --url https://www.google.com/ --output images/google.png

@@ -46,13 +46,15 @@ with open('domains.csv') as domainCSV:
         simplename = row['simplename'] # This defines the simplename
         validation = row['validation'] # This defines the validation row
         
+        print('\x1b[6;30;42m' + "Now validating urls..." + '\x1b[0m' + '\n')
+
         try: 
             checkurl = requests.get(domainname)
             if checkurl.status_code < 400:
-                print ('\u001b[37m' + domainname + " has been validated." + '\x1b[0m' + '\n') # Adding some colors as well
+                print ('\u001b[37m' + "  -- " + domainname + " has been validated." + '\x1b[0m' + '\n') # Adding some colors as well
 
         except ConnectionError:
-            print ('\u001b[31m' + domainname + " is not valid and will be skipped." + '\x1b[0m' + '\n') # Adding some colors as well
+            print ('\u001b[31m' + "  -- " + domainname + " is not valid and will be skipped." + '\x1b[0m' + '\n') # Adding some colors as well
 
             #print(df)
 
@@ -121,20 +123,45 @@ with open('domains.csv') as domainCSV:
                 background.paste(png, mask=png.split()[3]) # 3 is the alpha channel
 
                 background.save('results/' + simplename + '/' + outputfilenamejpg, 'JPEG', quality=80)
+
+                os.remove('results/' + simplename + '/' + outputfilename) # deletes .png file from taking up space
             
             except FileNotFoundError:
                 print("Looks like the file wasn't created because the site didn't get scraped properly.")
 
-            """
-            png.load() # required for png.split()
 
-            background = Image.new("RGB", png.size, (255, 255, 255))
-            background.paste(png, mask=png.split()[3]) # 3 is the alpha channel
 
-            background.save('results/' + simplename + '/' + outputfilenamejpg, 'JPEG', quality=80)
 
-            print('\x1b[3;37;40m' + '  -- Image converted to .jpg' + '\x1b[0m')
-            """
+            ###################################################
+            # CROP AND SAVE FOR HOMEPAGE GRID
+            ###################################################
+            try:            
+                # Opens a image in RGB mode 
+                toCrop = Image.open(r'results/' + simplename + '/' + outputfilenamejpg) 
+                  
+                # Size of the image in pixels (size of orginal image) 
+                # (This is not mandatory) 
+                width, height = toCrop.size 
+                  
+                # Setting the points for cropped image 
+                left = 0
+                top = 0
+                right = width
+                bottom = 1440
+                  
+                # Cropped image of above dimension 
+                # (It will not change orginal image) 
+                croppedImage = toCrop.crop((left, top, right, bottom)) 
+                  
+                # Shows the image in image viewer 
+                #croppedImage.show() Test to preview
+                croppedPath = 'results/' + simplename + '/' + 'homepage-thumb-' + simplename + '.jpg'
+                croppedImage.save(croppedPath, 'JPEG', quality=80)
+
+            except FileNotFoundError: # Error handling if original image wasn't created
+                print("Looks like the file wasn't created because the site didn't get scraped properly.")
+
+
 
 
             ###################################################
@@ -212,7 +239,7 @@ with open('domains.csv') as domainCSV:
             calcDiff = (other / (white + other) * 100)
             diffPercentageRounded = str(round(calcDiff, 2)) #Same thing, but rounded as a two decimal variable
 
-            print("Differences are calculated at " +  diffPercentageRounded + "%") 
+            print("  -- Differences are calculated at " +  diffPercentageRounded + "%") 
 
 
 

@@ -29,6 +29,7 @@ Features:
 ## Reports
 * Skip folders that are not in the domains.csv list
 * Update reports page design as per Figma
+* See historic scans
 
 ## Metrics
 
@@ -37,6 +38,7 @@ Features:
 * DONE: ~Add visualization of % change over time~
 * Rotate X-axis labels 90% to fit better
 * Add bar chart labels to better understand data
+* Record data to second "full" chart for homepage reference
 
 ## Random
 * Address which license is being used

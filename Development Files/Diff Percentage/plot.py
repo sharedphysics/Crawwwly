@@ -19,6 +19,8 @@ diffplot = plt.bar(x=dataframeDiff['timestamp'], height=dataframeDiff['differenc
 
 plt.savefig('diffplot.png')
 
+plt.close()
+
 
 """
 s = pd.Series([1, 2, 3])
@@ -31,5 +33,6 @@ fig.savefig('my_plot.png')
 NOTES:
 
 - https://stackoverflow.com/questions/49015957/how-to-get-python-graph-output-into-html-webpage-directly
+- HAve to close plot to not keep adding incremental changes in loop: https://stackoverflow.com/questions/37734512/savefig-loop-adds-previous-plots-to-figure
 
 """

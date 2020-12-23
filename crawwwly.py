@@ -207,7 +207,7 @@ with open('domains.csv') as domainCSV:
                    white += 1
                 else:
                     other += 1
-            print('white=' + str(white)+', Other='+str(other))
+            # print('white=' + str(white)+', Other='+str(other)) Testing calculations.
 
             calcDiff = (other / (white + other) * 100)
             diffPercentageRounded = str(round(calcDiff, 2)) #Same thing, but rounded as a two decimal variable
@@ -222,8 +222,8 @@ with open('domains.csv') as domainCSV:
             
             datestamp2 = now.strftime("%m/%d/%Y-%H:%M")
             stringDatestamp = str(datestamp2)
-            
-            DiffLog = Path(path + "diff-history.csv")
+
+            DiffLog = Path(path + '/' + "diff-history.csv")
 
             if DiffLog.is_file():
                 writeDiffLog = open(DiffLog,"a+") # open in append mode
@@ -241,15 +241,17 @@ with open('domains.csv') as domainCSV:
             # CREATE BAR CHART
             ###################################################
 
-            dataframeDiff = pd.read_csv(path + "diff-history.csv")
+            dataframeDiff = pd.read_csv(path + '/' + "diff-history.csv")
             
-            #print (dataframeDiff) # Testing data that was read.
+            # print (dataframeDiff) # Testing data that was read.
 
             diffplot = plt.bar(x=dataframeDiff['timestamp'], height=dataframeDiff['difference'])
 
-            plt.savefig(path + "diffplot.png")
+            plt.savefig(path + '/' + "diffplot.png")
 
-            plotPath = str(path + "diffplot.png") # save plotpath as a variable for future reference
+            plt.clf() # Clean plot cache so that it doesn't keep adding every loop.
+
+            plotPath = str(path + '/' + "diffplot.png") # save plotpath as a variable for future reference
 
             ###################################################
             # BUILD HTML REPORT SNIPPETS
